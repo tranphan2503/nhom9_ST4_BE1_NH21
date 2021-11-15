@@ -9,6 +9,31 @@ $items = array();
 $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
 return $items; //return an array
 }
+public function getLaptops()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `type_id`=2");
+        $sql->execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items;
+    }
+
+public function getSmartphones()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `type_id`=1");
+        $sql->execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items;
+    }
+public function getSmartwacth()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `type_id`=4");
+        $sql->execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items;
+    }
 
 public function getAllProducts()
 {
@@ -94,6 +119,35 @@ public function get3ProductByType($type_id,$page,$perPage)
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
+    }
+public function searchAll($keyword)
+    {
+        $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `name` LIKE ?");
+        $keyword = "%$keyword%";
+        $sql->bind_param("s",$keyword);
+        $sql->execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items;
+    }
+public function searchNameByTypeIDAndName($keyword, $type_id)
+    {
+        $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `name` LIKE ? AND `type_id` = ?");
+        $keyword = "%$keyword%";
+        $sql->bind_param("si",$keyword, $type_id);
+        $sql->execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items;
+    }
+public function searchNameByTypeID($type_id)
+    {
+        $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `type_id` = ?");
+        $sql->bind_param("i", $type_id);
+        $sql->execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items;
     }
 function paginate($url, $total, $perPage, $page)
 {

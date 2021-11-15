@@ -237,11 +237,16 @@
 						<!-- store products -->
 						<div class="row">
 							<?php
-							if(isset($_GET['keyword'])):
-								$keyword=$_GET['keyword'];
-								$search = $product->search($keyword);
-								foreach($search as $value):
-							?>
+							if (isset($_GET['submit'])) :
+								$type_id = $_GET['id'];
+								$keyword = $_GET['keyword'];
+								if ($keyword !="") {
+									$search = $type_id == 0? $product->searchAll($keyword): $product->searchNameByTypeIDAndName($keyword, $type_id);
+								} else {
+									$search =  $product->searchNameByTypeID($type_id);
+								}
+								foreach ($search as $value):
+								?>
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
@@ -302,5 +307,5 @@
 <!-- /container -->
 		</div>
 		<!-- /SECTION -->
-<?php include "footer.html";
+<?php include "footer.php";
  ?>
