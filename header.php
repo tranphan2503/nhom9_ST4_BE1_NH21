@@ -2,7 +2,12 @@
 require "config.php";
 require "models/db.php";
 require "models/product.php";
+require "models/protype.php";
+
+$protype = new Protype;
 $product = new Product;
+
+$getAllProtype = $protype->getAllProtype();
 $getNewProducts = $product->getNewProducts();
 $getAllProducts = $product->getAllProducts();
 $getManuName = $product->getManuName();
@@ -181,12 +186,10 @@ $getManuName = $product->getManuName();
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
 						<li class="active"><a href="index.php">Home</a></li>
-						<li><a href="#">Hot Deals</a></li>
-						<li><a href="http://localhost/nhom9/result.php?keyword=M%C3%A1y+t%C3%ADnh+b%E1%BA%A3ng">Tablet</a></li>
-						<li><a href="http://localhost/nhom9/result.php?keyword=laptop">Laptops</a></li>
-						<li><a href="http://localhost/nhom9/result.php?keyword=%C4%90i%E1%BB%87n+tho%E1%BA%A1i">Smartphones</a></li>
-						<li><a href="http://localhost/nhom9/result.php?keyword=%C4%91%E1%BB%93ng+h%E1%BB%93">Đồng hồ</a></li>
-						<li><a href="http://localhost/nhom9/result.php?keyword=m%C3%A1y+in">Máy in</a></li>
+						<?php foreach($getAllProtype as $value): ?>
+						<li><a href="products.php?type_id=<?php echo $value['type_id']?>">
+						<?php echo $value['type_name'] ?></a></li>
+						<?php endforeach; ?>
 					</ul>
 					<!-- /NAV -->
 				</div>
