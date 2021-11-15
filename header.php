@@ -22,7 +22,7 @@ $getManuName = $product->getManuName();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Hiếu-Phấn Group</title>
+	<title>HiếuPhấn Group</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -63,8 +63,7 @@ $getManuName = $product->getManuName();
 						<a href="https://www.facebook.com/tranphanleader"><i class="fa fa-facebook"></i>HPGroup</a>
 					</li>
 					<li><a href="hpgroup@gmail.com"><i class="fa fa-envelope-o"></i> hpgroup@gmail.com</a></li>
-					<li><a href="ggmap.html"><i class="fa fa-map-marker"></i> 720A Điện Biên Phủ, Phường 22, Bình Thạnh, Thành phố Hồ Chí Minh
-</a></li>
+					<li><a href="ggmap.html"><i class="fa fa-map-marker"></i> 53 Vo Van Ngan Str, Linh Chieu Ward</a></li>
 				</ul>
 				<ul class="header-links pull-right">
 					<li><a href="#"><i class="fa fa-money"></i> VNĐ</a></li>
