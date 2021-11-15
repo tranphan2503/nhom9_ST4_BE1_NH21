@@ -95,22 +95,19 @@ public function get3ProductByType($type_id,$page,$perPage)
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
-function paginate($url, $total, $perPage)
+function paginate($url, $total, $perPage, $page)
 {
     $totalLinks = ceil($total/$perPage);
- 	$link ="";
-    	for($j=1; $j <= $totalLinks ; $j++)
-     	{
-             if($j == $page){
-                $link = $link."<li class='active'>$j</li>";
-             }
-             else{
-                $link = $link."<li><a href='$url&page=$j'> $j </a></li>";
-
-             }
-             
-     	}
-     	return $link;
+    $link ="";
+   for($j=1; $j <= $totalLinks ; $j++){
+       if($j == $page){
+           $link = $link."<li class='active'>$j</li>";
+       }
+         else{
+           $link = $link."<li><a href='$url&page=$j'> $j </a></li>";
+         }
+    }
+    return $link;
 }
 
 public function search($keyword)
