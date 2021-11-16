@@ -12,7 +12,7 @@
                     </form>
                     <ul class="newsletter-follow">
                         <li>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/HPGroup-106667315171787"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -46,7 +46,7 @@
                         <h3 class="footer-title">About Us</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
                         <ul class="footer-links">
-                            <li><a href="ggmap.html"><i class="fa fa-map-marker"></i> 53 Vo Van Ngan,Linh Chieu</a></li>
+                            <li><a href="maps.html"><i class="fa fa-map-marker"></i>Thành phố Hồ Chí Minh</a></li>
                             <li><a href="#"><i class="fa fa-phone"></i>(+84)366639127</a></li>
                             <li><a href="#"><i class="fa fa-envelope-o"></i>hpgroup@gmail.com</a></li>
                         </ul>

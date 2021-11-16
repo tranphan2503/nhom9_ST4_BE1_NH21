@@ -50,7 +50,6 @@ $getManuName = $product->getManuName();
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-<<<<<<< HEAD
 </head>
 
 <body>
@@ -61,34 +60,15 @@ $getManuName = $product->getManuName();
 			<div class="container">
 				<ul class="header-links pull-left">
 					<li>
-						<a href="https://www.facebook.com/tranphanleader"><i class="fa fa-facebook"></i>HPGroup</a>
+						<a href="https://www.facebook.com/HPGroup-106667315171787"><i class="fa fa-facebook"></i>HPGroup</a>
 					</li>
-					<li><a href="hpgroup@gmail.com"><i class="fa fa-envelope-o"></i> hpgroup@gmail.com</a></li>
-					<li><a href="ggmap.html"><i class="fa fa-map-marker"></i> 53 Vo Van Ngan Str, Linh Chieu Ward</a></li>
+					<li><a href="#"><i class="fa fa-envelope-o"></i> hpgroup@gmail.com</a></li>
+					<li><a href="maps.html"><i class="fa fa-map-marker"></i>720A Điện Biên Phủ, Phường 22, Bình Thạnh, Thành phố Hồ Chí Minh</a></li>
 				</ul>
 				<ul class="header-links pull-right">
 					<li><a href="#"><i class="fa fa-money"></i> VNĐ</a></li>
 					<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
 				</ul>
-=======
-    </head>
-	<body>
-		<!-- HEADER -->
-		<header>
-			<!-- TOP HEADER -->
-			<div id="top-header">
-				<div class="container">
-					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-						<li><a href="maps.html"><i class="fa fa-map-marker"></i>720A Điện Biên Phủ, Phường 22, Bình Thạnh, Thành phố Hồ Chí Minh</a></li>
-					</ul>
-					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-						<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
-					</ul>
-				</div>
->>>>>>> b585f9099855c78c32e17b423f60e249cf06e2b7
 			</div>
 		</div>
 		<!-- /TOP HEADER -->
