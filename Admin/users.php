@@ -39,20 +39,32 @@
           <table class="table table-striped projects">
               <thead>
               <tr>
-                      <th style="width: 10%" class="text-center">Manu_id</th>
-                      <th style="width: 20%" class="text-center">Manu_name</th>
+                      <th style="width: 3%">ID</th>
+                      <th style="width: 8%">Name</th>
+                      <th style="width: 10%">Tài Khoản</th>
+                      <th style="width: 10%">Mật khẩu </th>
+                      <th style="width: 10%" class="text-center">Năm sinh</th>
+                      <th style="width: 20%" class="text-center">Địa chỉ</th>
+                      <th style="width: 10%" class="text-center">SDT</th>
+                      <th style="width: 15%" class="text-center">Email</th>
                       <th style="text-align: center;width: 20%;">Action</th>
                   </tr>
               </thead>
               <tbody>
               <?php
-                    $getAllManufactures = $manufacture->getAllManufactures();
-                    foreach($getAllManufactures as $value):    
+                    $getAllUsers = $user->getAllUsers();
+                    foreach($getAllUsers as $value):    
                 ?>
                   <tr>
-                      <td class="project-state"><?php echo $value['manu_id'] ?></td>
-                      <td class="project-state"><?php echo $value['manu_name'] ?></td>
-                      <td class="project-actions text-center">
+                      <td><?php echo $value['user_id'] ?></td>
+                      <td><a><?php echo $value['user_name']?></a><br/></td>
+                      <td class="project-state"><?php echo $value['tk'] ?></td>
+                      <td class="project-state"><?php echo $value['mk'] ?></td>
+                      <td class="project-state"><?php echo $value['ngaysinh'] ?></td>
+                      <td class="project-state"><?php echo $value['diachi'] ?></td>
+                      <td class="project-state"><?php echo $value['sdt'] ?></td>
+                      <td class="project-state"><?php echo $value['email'] ?></td>
+                      <td class="project-actions text-right">
                           
                           <a class="btn btn-info btn-sm" href="#">
                               <i class="fas fa-pencil-alt">

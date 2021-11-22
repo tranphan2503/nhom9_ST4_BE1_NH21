@@ -2,7 +2,13 @@
 require "config.php";
 require "models/db.php";
 require "models/product.php";
+require "models/protype.php";
+require "models/manufacture.php";
+require "models/user.php";
 $product = new Product;
+$protype = new Protype;
+$manufacture = new Manufacture;
+$user = new User;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -234,9 +240,15 @@ $product = new Product;
                 </a>
               </li>
               <li class="nav-item">
-                <a href="protype.php" class="nav-link">
+                <a href="protypes.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>protype</p>
+                  <p>Protypes</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="users.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Users</p>
                 </a>
               </li>
               <li class="nav-item">

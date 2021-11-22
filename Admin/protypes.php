@@ -39,19 +39,19 @@
           <table class="table table-striped projects">
               <thead>
               <tr>
-                      <th style="width: 10%" class="text-center">Manu_id</th>
-                      <th style="width: 20%" class="text-center">Manu_name</th>
+                      <th style="width: 10%" class="text-center">Type_id</th>
+                      <th style="width: 20%" class="text-center">Type_name</th>
                       <th style="text-align: center;width: 20%;">Action</th>
                   </tr>
               </thead>
               <tbody>
               <?php
-                    $getAllManufactures = $manufacture->getAllManufactures();
-                    foreach($getAllManufactures as $value):    
+                    $getAllProtypes = $protype->getAllProtypes();
+                    foreach($getAllProtypes as $value):    
                 ?>
                   <tr>
-                      <td class="project-state"><?php echo $value['manu_id'] ?></td>
-                      <td class="project-state"><?php echo $value['manu_name'] ?></td>
+                      <td class="project-state"><?php echo $value['type_id'] ?></td>
+                      <td class="project-state"><?php echo $value['type_name'] ?></td>
                       <td class="project-actions text-center">
                           
                           <a class="btn btn-info btn-sm" href="#">

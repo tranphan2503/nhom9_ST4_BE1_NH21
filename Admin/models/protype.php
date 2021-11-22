@@ -1,6 +1,6 @@
 <?php
 class Protype extends Db{
-    public function getAllProtype()
+    public function getAllProtypes()
     {
         $sql = self::$connection->prepare("SELECT * FROM protypes");
         $sql->execute(); //return an object
