@@ -225,47 +225,44 @@ $user = new User;
                 Dashboard
               </p>
             </a>
-           
           </li>
-          <li class="nav-item">
-                <a href="products.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Products</p>
-                </a>
-              </li>
-              <li class="nav-item">
+          <li class="nav-item menu-open">
+            <a href="products.php" class="nav-link">
+              <i class="nav-icon fab fa-product-hunt"></i>
+              <p>
+              Products
+              </p>
+            </a>
+          </li>
+              <li class="nav-item menu-open">
+            <a href="productadd.php" class="nav-link">
+              <i class="nav-icon fas fa-plus-square"></i>
+              <p>
+                Add product
+              </p>
+            </a>
+          </li>
+              <li class="nav-item menu-open">
                 <a href="Manufactures" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="nav-icon fas fa-industry"></i>
                   <p>Manufactures</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item menu-open">
                 <a href="protypes.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="nav-icon far fa-clipboard"></i>
                   <p>Protypes</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item menu-open">
                 <a href="users.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="nav-icon fas fa-users"></i>
                   <p>Users</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="pages/examples/projects.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Projects</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/project-add.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Project Add</p>
-                </a>
-              </li>
-              <li class="nav-item">
+              <li class="nav-item menu-open">
                 <a href="pages/examples/project-edit.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="nav-icon fas fa-edit"></i>
                   <p>Project Edit</p>
                 </a>
               </li>
