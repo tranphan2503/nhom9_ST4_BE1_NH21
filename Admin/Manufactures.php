@@ -6,12 +6,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Projects</h1>
+            <h1>Manufacture</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Projects</li>
+              <li class="breadcrumb-item active">Manufacture</li>
             </ol>
           </div>
         </div>
@@ -24,8 +24,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Projects</h3>
-
+          <h3 class="card-title">Manufacture</h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
               <i class="fas fa-minus"></i>
@@ -54,12 +53,14 @@
                       <td class="project-state"><?php echo $value['manu_name'] ?></td>
                       <td class="project-actions text-center">
                           
-                          <a class="btn btn-info btn-sm" href="#">
+                          <a class="btn btn-info btn-sm"
+                          href="manufactureEdit.php?manu_id=<?php echo $value['manu_id'] ?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          <a class="btn btn-danger btn-sm" 
+                          href="delManufacture.php?manu_id=<?php echo $value['manu_id'] ?>">
                               <i class="fas fa-trash">
                               </i>
                               Delete

@@ -64,7 +64,8 @@
                       <td class="project-state text-left"><?php echo substr($value['description'],0,60)?></td>
                       <td class="project-actions text-center">
                           
-                          <a class="btn btn-info btn-sm" href="#">
+                          <a class="btn btn-info btn-sm" 
+                          href="editProduct.php?id=<?php echo $value['id'] ?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit

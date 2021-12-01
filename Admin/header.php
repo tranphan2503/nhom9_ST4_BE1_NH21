@@ -243,9 +243,15 @@ $user = new User;
             </a>
           </li>
               <li class="nav-item menu-open">
-                <a href="Manufactures" class="nav-link">
+                <a href="Manufactures.php" class="nav-link">
                   <i class="nav-icon fas fa-industry"></i>
                   <p>Manufactures</p>
+                </a>
+              </li>
+              <li class="nav-item menu-open">
+                <a href="ManufactureAdd.php" class="nav-link">
+                  <i class="nav-icon fas fa-industry"></i>
+                  <p>Add Manufactures</p>
                 </a>
               </li>
               <li class="nav-item menu-open">

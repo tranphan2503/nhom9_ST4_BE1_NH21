@@ -27,5 +27,34 @@
         $sql->bind_param("i", $id);
         return $sql->execute(); //return an object
     }
+    public function editProduct($name,$manu_id,$type_id,$price,$desc,$image,$feature,$id)
+    {
+        if($image== null){
+            $sql = self::$connection->prepare("UPDATE `products` SET `name`=?,`manu_id`=?,`type_id`=?,`price`=?,`description`=?,`feature`=? WHERE `id`=? ");
+        $sql->bind_param("siiisii", $name,$manu_id,$type_id,$price,$desc,$feature,$id);
+        }
+        else{
+            $sql = self::$connection->prepare("UPDATE `products` SET `name`=?,`manu_id`=?,`type_id`=?,`price`=?,`description`=?,`image`=?,`feature`=? WHERE `id`=? ");
+            $sql->bind_param("siiissii", $name,$manu_id,$type_id,$price,$desc,$image,$feature,$id);
+        }
+        return $sql->execute(); //return an object
+    }
+    public function getProductById($id)
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products WHERE id = ?");
+        $sql->bind_param("i",$id);
+        $sql->execute();
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+    public function getAllfeature()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM protypes");
+        $sql->execute(); //return an object
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
 }
 ?>
