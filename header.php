@@ -67,7 +67,7 @@ $getManuName = $product->getManuName();
 				</ul>
 				<ul class="header-links pull-right">
 					<li><a href="#"><i class="fa fa-money"></i> VNĐ</a></li>
-					<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+					<li><a href="login/index.php"><i class="fa fa-user-o"></i> My Account</a></li>
 				</ul>
 			</div>
 		</div>
