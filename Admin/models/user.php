@@ -8,10 +8,10 @@ class User extends Db{
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
-    public function addUser($user_name,$pass)
+    public function addUser($user_name,$password)
     {
         $sql = self::$connection->prepare("INSERT INTO `users`(`user_name`, `password`) VALUES (?,?)");
-        $sql->bind_param("ss", $user_name, $pass);
+        $sql->bind_param("ss", $user_name, $password);
         return $sql->execute(); //return an object
     }
     public function delUser($user_id)

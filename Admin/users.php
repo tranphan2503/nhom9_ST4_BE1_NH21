@@ -55,6 +55,12 @@
                       <td><a><?php echo $value['user_name']?></a><br/></td>
                       <td class="project-state"><?php echo $value['password'] ?></td>
                       <td class="project-actions text-center">
+                      <a class="btn btn-info btn-sm" 
+                          href="UserEdit.php?user_id=<?php echo $value['user_id'] ?>">
+                              <i class="fas fa-pencil-alt">
+                              </i>
+                              Edit
+                          </a>
                           <a class="btn btn-danger btn-sm" href="#">
                               <i class="fas fa-trash">
                               </i>

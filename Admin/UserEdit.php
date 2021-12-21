@@ -23,7 +23,7 @@ include "header.php";
 
     <!-- Main content -->
     <section class="content">
-    <form action="adduser.php" method="post" enctype="multipart/form-data">
+    <form action="editUser.php" method="post" enctype="multipart/form-data">
 
       <div class="row">
         <div class="col-md-12">
@@ -40,7 +40,7 @@ include "header.php";
             <div class="card-body">
               <div class="form-group">
                 <label for="inputName">User Name</label>
-                <input type="text" id="inputName" class="form-control"name="username">
+                <input type="text" id="inputName" class="form-control"name="user_name">
               </div>
               
             </div>
