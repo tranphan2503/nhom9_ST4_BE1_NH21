@@ -37,6 +37,7 @@ $user = new User;
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -137,7 +138,7 @@ $user = new User;
               </li>
               <li class="nav-item menu-open">
                 <a href="ManufactureAdd.php" class="nav-link">
-                  <i class="nav-icon fas fa-industry"></i>
+                  <i class="nav-icon fas fa-plus-square"></i>
                   <p>Add Manufactures</p>
                 </a>
               </li>
@@ -148,8 +149,8 @@ $user = new User;
                 </a>
               </li>
               <li class="nav-item menu-open">
-                <a href="protypes.php" class="nav-link">
-                  <i class="nav-icon far fa-clipboard"></i>
+                <a href="ProtypeAdd.php" class="nav-link">
+                  <i class="nav-icon fas fa-plus-square"></i>
                   <p>Add Protypes</p>
                 </a>
               </li>
@@ -160,8 +161,8 @@ $user = new User;
                 </a>
               </li>
               <li class="nav-item menu-open">
-                <a href="protypes.php" class="nav-link">
-                  <i class="nav-icon far fa-clipboard"></i>
+                <a href="UserAdd.php" class="nav-link">
+                  <i class="nav-icon fas fa-plus-square"></i>
                   <p>Add User</p>
                 </a>
               </li>

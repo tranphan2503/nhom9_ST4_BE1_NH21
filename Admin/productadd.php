@@ -73,6 +73,7 @@ include "header.php";
               <div class="form-group">
                 <label for="inputProjectLeader">Description</label>
                 <textarea id="inputProjectLeader" class="form-control" rows="3" name="desc"></textarea>
+                
               </div>
               <div class="form-group">
                 <label for="inputProjectLeader">Image</label>

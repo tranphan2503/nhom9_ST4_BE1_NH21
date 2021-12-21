@@ -94,7 +94,6 @@ include "header.php"
 											</div>
 											</div>
 											<div class="product-body">
-												<p class="product-category"><?php echo $value['manu_id'] ?></p>
 												<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
 												<h4 class="product-price"><?php echo number_format($value['price'])?> VND <del 
 												class="product-old-price"><br><?php echo number_format($value['price']+($value['price']/100*30))?> VND></del></h4>

@@ -42,7 +42,6 @@
                       <th style="width: 3%">ID</th>
                       <th style="width: 10%"class="text-center">Tài Khoản</th>
                       <th style="width: 10%"class="text-center">Mật khẩu </th>
-                      <th style="width: 15%" class="text-center">role_id</th>
                       <th style="text-align: center;width: 20%;">Action</th>
                   </tr>
               </thead>
@@ -55,14 +54,7 @@
                       <td><?php echo $value['user_id'] ?></td>
                       <td><a><?php echo $value['user_name']?></a><br/></td>
                       <td class="project-state"><?php echo $value['password'] ?></td>
-                      <td class="project-state"><?php echo $value['role_id'] ?></td>
                       <td class="project-actions text-center">
-                          
-                          <a class="btn btn-info btn-sm" href="#">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              Edit
-                          </a>
                           <a class="btn btn-danger btn-sm" href="#">
                               <i class="fas fa-trash">
                               </i>

@@ -29,6 +29,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
+              <?php 
+                  $countProducts = $product->countProducts();
+                  foreach($countProducts as $key=>$value){
+                    foreach($value as $value2) {
+                ?>
+                <h3><?php echo $value2; ?></h3>
+                <?php } ?>
+                <?php } ?>
                 <h3>Product</h3>
 
                 <p>view all products</p>
@@ -44,6 +52,14 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
+              <?php 
+                  $countManus = $manufacture->countManus();
+                  foreach($countManus as $key=>$value){
+                    foreach($value as $value2) {
+                ?>
+                <h3><?php echo $value2; ?></h3>
+                <?php } ?>
+                <?php } ?>
                 <h3>Manufactures<sup style="font-size: 20px"></sup></h3>
 
                 <p>view all Manufactures</p>
@@ -59,6 +75,14 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
+              <?php 
+                  $countTypes = $protype->countTypes();
+                  foreach($countTypes as $key=>$value){
+                    foreach($value as $value2) {
+                ?>
+                <h3><?php echo $value2; ?></h3>
+                <?php } ?>
+                <?php } ?>
                 <h3>Protypes</h3>
 
                 <p>view all Protypes</p>
@@ -74,6 +98,14 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
+              <?php 
+                  $countUsers = $user->countUsers();
+                  foreach($countUsers as $key=>$value){
+                    foreach($value as $value2) {
+                ?>
+                <h3><?php echo $value2; ?></h3>
+                <?php } ?>
+                <?php } ?>
                 <h3>Account</h3>
 
                 <p>view all users</p>

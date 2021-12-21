@@ -48,6 +48,13 @@
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
         return $items; //return an array
     }
+    public function countProducts()
+    {
+        $sql = self::$connection->prepare("SELECT COUNT(*) FROM `products`");
+        $sql->execute(); //return an object       
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
     public function getAllfeature()
     {
         $sql = self::$connection->prepare("SELECT * FROM protypes");
