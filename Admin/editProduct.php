@@ -83,11 +83,11 @@ include "header.php";
               </div>
               <div class="form-group">
                 <label for="inputClientCompany">Price</label>
-                <input type="text" id="inputClientCompany" class="form-control" name="price" value="<?php echo $value['price'] ?>">
+                <input type="number" id="inputClientCompany" class="form-control" name="price" value="<?php echo $value['price'] ?>">
               </div>
               <div class="form-group">
-                <label for="inputProjectLeader">Description</label>
-                <textarea id="inputProjectLeader" class="form-control" rows="3" name="desc" ><?php echo $value['description'] ?></textarea>
+                <label for="summernote">Description</label>
+                <textarea id="summernote" class="form-control" rows="3" name="desc" ><?php echo $value['description'] ?></textarea>
               </div>
               <div class="form-group">
                 <label for="inputProjectLeader">Image</label>
@@ -111,7 +111,7 @@ include "header.php";
       </div>
       <div class="row">
         <div class="col-12">
-          <input name="submit" type="submit" value="Create new Porject" class="btn btn-success float-right">
+          <input name="submit" type="submit" value="Edit Product" class="btn btn-success float-right">
         </div>
       </div>
       </form>
