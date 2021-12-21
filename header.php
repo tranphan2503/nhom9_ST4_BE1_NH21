@@ -3,14 +3,17 @@ require "config.php";
 require "models/db.php";
 require "models/product.php";
 require "models/protype.php";
+require "models/manufacture.php";
 
 $protype = new Protype;
 $product = new Product;
+$manufacture = new Manufacture;
 
 $getAllProtype = $protype->getAllProtype();
 $getNewProducts = $product->getNewProducts();
 $getAllProducts = $product->getAllProducts();
 $getManuName = $product->getManuName();
+$getAllManufactures = $manufacture->getAllManufactures();
 //var_dump($getAllProducts);
 ?>
 <!DOCTYPE html>

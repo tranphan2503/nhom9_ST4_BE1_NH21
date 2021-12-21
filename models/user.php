@@ -16,4 +16,10 @@ public function checkLogin($username,$password)
             return false;
         }
 }
+public function addUser($user_name,$pass)
+    {
+        $sql = self::$connection->prepare("INSERT INTO `users`(`user_name`,`password`) VALUES (?,?)");
+        $sql->bind_param("ss", $user_name, $pass);
+        return $sql->execute(); //return an object
+    }
 }

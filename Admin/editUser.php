@@ -1,12 +1,13 @@
 <?php
 require "config.php";
 require "models/db.php";
-require "models/protype.php";
-$protype = new Protype;
+require "models/user.php";
+$user = new User;
 //xu li them
 if(isset($_POST['submit'])){
-    $type_name = $_POST['type_name'];
-    $type_id = $_POST['hidden_id'];
-    $protype->editProtype($type_name,$type_id);
+    $user_name = $_POST['user_name'];
+    $password = $_POST['password'];
+    $user_id = $_POST['hidden_id'];
+    $user->editUser($user_name,$password,$user_id);
 }
-header('location:protypes.php');
+header('location:users.php');

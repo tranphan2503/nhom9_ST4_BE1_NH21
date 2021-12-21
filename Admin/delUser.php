@@ -1,10 +1,10 @@
 <?php
 require "config.php";
 require "models/db.php";
-require "models/protype.php";
-$protype = new Protype;
+require "models/user.php";
+$user = new User;
 //xu li them
-if(isset($_GET['type_id'])){
-    $protype->delProtype($_GET['type_id']);
+if(isset($_GET['user_id'])){
+    $user->delUser($_GET['user_id']);
 }
-header('location:protypes.php');
+header('location:users.php');
