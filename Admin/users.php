@@ -57,6 +57,7 @@
                       <td class="project-actions text-center">
                       <a class="btn btn-info btn-sm"
                            href="UserEdit.php?user_id=<?php echo $value['user_id'] ?>">
+
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit

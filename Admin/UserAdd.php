@@ -40,7 +40,7 @@ include "header.php";
             <div class="card-body">
               <div class="form-group">
                 <label for="inputName">User Name</label>
-                <input type="text" id="inputName" class="form-control"name="user_name">
+                <input type="text" id="inputName" class="form-control"name="username">
               </div>
               
             </div>
