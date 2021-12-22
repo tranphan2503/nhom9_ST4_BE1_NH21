@@ -9,6 +9,37 @@ $items = array();
 $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
 return $items; //return an array
 }
+public function getTopSell()
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products ORDER BY qty DESC LIMIT 0,3");
+        $sql->execute(); //return an object
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+    public function getRelatedProducts($type_id)
+    {
+        $sql = self::$connection->prepare("SELECT * FROM products, protypes
+        WHERE products.type_id = ? and products.type_id = protypes.type_id ORDER BY qty DESC LIMIT 0,3");
+        $sql->bind_param("i", $type_id);
+        $sql->execute(); //return an object
+        $items = array();
+        $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $items; //return an array
+    }
+    public function search2($keyword, $page, $perPage)
+    {
+        // Tính số thứ tự trang bắt đầu 
+  	    $firstLink = ($page - 1) * $perPage;
+          $sql = self::$connection->prepare("SELECT * FROM products WHERE `NAME` LIKE ? LIMIT ?,?");
+          $firstLink = ($page-1)* $perPage;
+          $keyword = "%$keyword%";
+          $sql->bind_param("sii", $keyword, $firstLink, $perPage);
+          $sql->execute(); //return an object
+          $items = array();
+          $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
+          return $items; //return an array
+    }
 public function getLaptops()
     {
         $sql = self::$connection->prepare("SELECT * FROM `products` WHERE `type_id`=2");

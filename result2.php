@@ -1,5 +1,4 @@
 <?php include "header.php"; ?>
-
 		<!-- BREADCRUMB -->
 		<div id="breadcrumb" class="section">
 			<!-- container -->
@@ -8,7 +7,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<ul class="breadcrumb-tree">
-							<li><a href="#">Home</a></li>
+							<li><a href="index.php">Home</a></li>
 							<li><a href="#">All Categories</a></li>
 							<li><a href="#">Accessories</a></li>
 							<li class="active">Headphones (227,490 Results)</li>
@@ -113,7 +112,7 @@
 
 						<!-- aside Widget -->
 						<div class="aside">
-							<h3 class="aside-title">Brand</h3>
+<h3 class="aside-title">Brand</h3>
 							<div class="checkbox-filter">
 								<div class="input-checkbox">
 									<input type="checkbox" id="brand-1">
@@ -211,7 +210,7 @@
 					<div id="store" class="col-md-9">
 						<!-- store top filter -->
 						<div class="store-filter clearfix">
-							<div class="store-sort">
+<div class="store-sort">
 								<label>
 									Sort By:
 									<select class="input-select">
@@ -237,26 +236,22 @@
 
 						<!-- store products -->
 						<div class="row">
-							<?php 
-							if(isset($_GET['type_id'])):
-							$type_id = $_GET['type_id'];
-							$getProductByType = $product->getProductByType($type_id);
-							// hiển thị 3 sản phẩm trên 1 trang
-							$perPage = 3; 				
-							// Lấy số trang trên thanh địa chỉ
-							$page = isset($_GET['page'])?$_GET['page']:1;
-							// Tính tổng số dòng, ví dụ kết quả là 18
-							$total = count($getProductByType);			
-							// lấy đường dẫn đến file hiện hành
-							$url = $_SERVER['PHP_SELF']."?type_id=".$type_id;
-							$get3ProductByType = $product->get3ProductByType($type_id,$page,$perPage);
-							foreach($get3ProductByType as $value):
-							?>
+							<?php
+							if (isset($_GET['submit'])) :
+								$type_id = $_GET['id'];
+								$keyword = $_GET['keyword'];
+								if ($keyword !="") {
+									$search = $type_id == 0? $product->searchAll($keyword): $product->searchNameByTypeIDAndName($keyword, $type_id);
+								} else {
+									$search =  $product->searchNameByTypeID($type_id);
+								}
+								foreach ($search as $value):
+								?>
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
-										<img src="./img/<?php echo $value['image'] ?>" alt="">
+										<img src="./img/<?php echo $value['image']?>" alt="">
 										<div class="product-label">
 											<span class="sale">-30%</span>
 											<span class="new">NEW</span>
@@ -264,8 +259,8 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
-										<h4 class="product-price"><?php echo number_format($value['price']) ?> VND</h4>
+										<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
+										<h4 class="product-price"><?php echo number_format($value['price']) ?>VND</del></h4>
 										<div class="product-rating">
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
@@ -274,20 +269,21 @@
 											<i class="fa fa-star"></i>
 										</div>
 										<div class="product-btns">
-											<button class="quick-view"><a href="detail.php?type_id=<?php echo $value['type_id']?>&id=<?php echo $value['id']?>" method="get"><i class="fa fa-eye"></i></a><span class="tooltipp">quick view</span></button>
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
+											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 										</div>
 									</div>
 									<div class="add-to-cart">
-									<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i><a href="cart.php?id=<?php echo $value['id'] ?>"> add to cart</a></button>
+										<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i><a href="cart.php?id=<?php echo $value['id'] ?>"> add to cart</button>
 									</div>
 								</div>
 							</div>
 							<!-- /product -->
-							<?php
-								endforeach;
-							endif;
+							<?php 
+							endforeach;
+							endif ;
 							?>
-
 						</div>
 						<!-- /store products -->
 
@@ -295,7 +291,10 @@
 						<div class="store-filter clearfix">
 							<span class="store-qty">Showing 20-100 products</span>
 							<ul class="store-pagination">
-								<?php echo $product->paginate($url,$total,$perPage,$page) ?>
+								<li class="active">1</li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
 								<li><a href="#"><i class="fa fa-angle-right"></i></a></li>
 							</ul>
 						</div>
@@ -305,7 +304,8 @@
 				</div>
 				<!-- /row -->
 			</div>
-			<!-- /container -->
+<!-- /container -->
 		</div>
 		<!-- /SECTION -->
-<?php include "footer.php"; ?>
+<?php include "footer.php";
+ ?>

@@ -43,14 +43,14 @@ include "header.php";
           <table class="table table-striped products">
               <thead>
                   <tr>
-                      <th style="width: 12%">Name</th>
-                      <th style="width: 10%">Image</th>
-                      <th style="width: 40%;text-align: center;">Description</th>
-                      <th>Price </th>
-                      <th style="width: 8%" class="text-center">Manufacture</th>
+                      <th style="width: 20%;text-align: center">Name</th>
+                      <th style="width: 8%;text-align: center">Image</th>
+                      <th style="width: 35%;text-align: center;">Description</th>
+                      <th style="width: 8%;text-align: center;">Price </th>
+                      <th style="width: 5%" class="text-center">Manufacture</th>
                       <th style="width: 8%" class="text-center">Protypes</th>
                       <th style="width: 5%" class="text-center">Qty</th>
-                      <th style="width: 10%;text-align: center;">Action</th>
+                      <th style="width: 50%;text-align: center;">Action</th>
                   </tr>
               </thead>
               <tbody>
@@ -62,14 +62,14 @@ include "header.php";
                         if($value['id'] == $key){
                   ?>
                   <tr>
-                      <td>
-                        <?php echo $value['name']; ?>
+                      <td class="project-actions text-left">
+                        <?php echo substr($value['name'],0,55) ?>
                       </td>
-                      <td>
-                        <img width = "50px" src="img/<?php echo $value['image'] ?>" alt="">
+                      <td class="project-actions text-center">
+                        <img src="img/<?php echo $value['image'] ?>" alt="loi" style="width:50px">
                       </td>
                       <td class="project_progress" class="overflow" >
-                      <?php echo $value['description']; ?>
+                      <?php echo substr($value['description'],0,120)?>
                       </td>
                       <td class="project_progress">
                       <?php echo number_format( $value['price']); ?> VND
@@ -100,7 +100,7 @@ include "header.php";
                       <td class="project-actions text-right" style="text-align: center;">
                       <a class="btn btn-danger btn-sm" 
                           href="delcart.php?id=<?php echo $value['id'] ?>">
-                              <i class="fas fa-trash">
+                              <i class="fa fa-trash">
                               </i>
                               Delete
                       </td>
