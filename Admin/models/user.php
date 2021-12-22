@@ -11,6 +11,7 @@ class User extends Db{
     public function addUser($user_name,$pass)
     {
         $sql = self::$connection->prepare("INSERT INTO `users`(`user_name`,`password`) VALUES (?,?)");
+        $password = md5($pass);
         $sql->bind_param("ss", $user_name, $pass);
         return $sql->execute(); //return an object
     }
@@ -32,7 +33,7 @@ class User extends Db{
     public function editUser($user_name,$pass,$user_id)
     {
         $sql = self::$connection->prepare("UPDATE `users` SET `user_name`=?, `password`=? WHERE `user_id`=?");
-        $sql->bind_param("ssi", $user_name,$pass,$user_id);
+        $sql->bind_param("ssi", $user_name,$pass= md5($pass),$user_id);
         return $sql->execute(); //return an object
     }
     public function countUsers()

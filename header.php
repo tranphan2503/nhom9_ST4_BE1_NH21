@@ -85,7 +85,7 @@ $getAllManufactures = $manufacture->getAllManufactures();
 					<!-- LOGO -->
 					<div class="col-md-4">
 						<div class="header-logo">
-							<a href="#" class="logo">
+							<a href="index.php" class="logo">
 								<img src="./img/logoHP.png" alt="">
 							</a>
 						</div>
@@ -114,15 +114,6 @@ $getAllManufactures = $manufacture->getAllManufactures();
 					<!-- ACCOUNT -->
 					<div class="col-md-3 clearfix">
 						<div class="header-ctn">
-							<!-- Wishlist -->
-							<div>
-								<a href="#">
-									<i class="fa fa-heart-o"></i>
-									<span>Your Wishlist</span>
-									<div class="qty">2</div>
-								</a>
-							</div>
-							<!-- /Wishlist -->
 
 							<!-- Cart -->
 							<div class="dropdown">

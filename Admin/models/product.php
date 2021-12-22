@@ -16,8 +16,8 @@
     public function addProduct($name,$manu_id,$type_id,$price,$desc,$image,$feature)
     {
         $sql = self::$connection->prepare("INSERT 
-        INTO `products`(`name`, `manu_id`, `type_id`, `price`, `description`,`image`,`feature`) 
-        VALUES (?,?,?,?,?,?,?)");
+        INTO `products`(`name`, `manu_id`, `type_id`, `price`, `description`,`image`,`feature`,`qty`) 
+        VALUES (?,?,?,?,?,?,?,1)");
         $sql->bind_param("siiissi", $name,$manu_id,$type_id,$price,$desc,$image,$feature);
         return $sql->execute(); //return an object
     }

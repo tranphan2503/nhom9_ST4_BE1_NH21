@@ -11,7 +11,7 @@ return $items; //return an array
 }
 public function getTopSell()
     {
-        $sql = self::$connection->prepare("SELECT * FROM products ORDER BY qty DESC LIMIT 0,3");
+        $sql = self::$connection->prepare("SELECT * FROM products ORDER BY qty DESC LIMIT 0,5");
         $sql->execute(); //return an object
         $items = array();
         $items = $sql->get_result()->fetch_all(MYSQLI_ASSOC);
