@@ -61,7 +61,7 @@
                           </a>
                           <a class="btn btn-danger btn-sm" 
                           href="delManufacture.php?manu_id=<?php echo $value['manu_id'] ?>">
-                              <i class="fas fa-trash">
+                              <i class="fa fa-trash">
                               </i>
                               Delete
                           </a>

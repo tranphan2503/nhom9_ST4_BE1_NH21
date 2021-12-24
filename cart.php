@@ -112,7 +112,7 @@ include "header.php";
               </tbody>
           </table>
           <a href="index.php" class="btn btn-warning btn-md"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;Back</a>
-					<a href="checkout.php" class="btn btn-primary btn-md"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Payment</a>
+					<a href="checkout.php" class="btn btn-primary btn-md">&nbsp;Checkout <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
         <!-- /.card-body -->
       </div>
